@@ -1,19 +1,28 @@
 {
-  "posts": [
+  "movies": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "O Ataque dos Vermes Malditos",
+      "director": "Ron Underwood",
+      "duration": "1h 36m",
+      "genre": "Terror, Comedia",
+      "year": 2
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "O Ataque dos Tomates Assassinos",
+      "director": "John De Bello",
+      "duration": "1h 27m",
+      "genre": "Terror, Filme B",
+      "year": 1978
+    },
+    {
+      "id": 3,
+      "title": "As Branquelas",
+      "director": "Keenen Ivory Wayans",
+      "duration": "1h 49m",
+      "genre": "Comedia, História de detetives",
+      "year": 2004
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
