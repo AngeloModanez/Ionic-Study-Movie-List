@@ -12,6 +12,10 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   getMovies(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(`${environment.url}/movie`);
+    return this.http.get<Movie[]>(`${environment.url}/movies`);
+  }
+
+  getMovieById(id: number | string): Observable<Movie> {
+    return this.http.get<Movie>(`${environment.url}/movies/${id}`)
   }
 }
