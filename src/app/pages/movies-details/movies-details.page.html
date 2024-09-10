@@ -1,21 +1,27 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title></ion-title>
+  <ion-toolbar color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="auto">
+          <ion-icon button [routerLink]="['/movies']" name="arrow-back"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{movie.title}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
-
   <ion-accordion-group class="ion-margin" expand="inset">
     <ion-accordion value="first">
       <ion-item slot="header" color="dark">
         <ion-label>Movie Details</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">Director - {{movie.director}}</div>
-      <div class="ion-padding" slot="content">Duration - {{movie.duration}}</div>
       <div class="ion-padding" slot="content">Genre - {{movie.genre}}</div>
+      <div class="ion-padding" slot="content">Duration - {{movie.duration}}</div>
       <div class="ion-padding" slot="content">Year - {{movie.year}}</div>
     </ion-accordion>
   </ion-accordion-group>
