@@ -7,10 +7,7 @@
 <ion-content [fullscreen]="true">
   <ion-card color="dark">
     <ion-card-header>
-      <ion-card-title>
-        <ion-icon class="ion-margin-end" name="videocam"></ion-icon>
-        Movie List
-      </ion-card-title>
+      <ion-card-title>Movie List</ion-card-title>
     </ion-card-header>
     <ion-list>
       <ion-item button *ngFor="let movie of movies" [routerLink]="['/movies-details', movie.id]">

@@ -9,6 +9,7 @@ import { MovieService } from 'src/app/services/movie.service';
   styleUrls: ['./movies-details.page.scss'],
 })
 export class MoviesDetailsPage implements OnInit {
+  isModalOpen = false;
 
   movie: Movie = {} as Movie;
 
@@ -23,6 +24,10 @@ export class MoviesDetailsPage implements OnInit {
         next: movie => this.movie = movie
       })
     }
+  }
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
   }
 
 }

@@ -1,13 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>movies-details</ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">movies-details</ion-title>
-    </ion-toolbar>
   </ion-header>
+  <ion-accordion-group class="ion-margin" expand="inset">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="dark">
+        <ion-label>Song Details</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Director - {{movie.director}}</div>
+      <div class="ion-padding" slot="content">Duration - {{movie.duration}}</div>
+      <div class="ion-padding" slot="content">Genre - {{movie.genre}}</div>
+      <div class="ion-padding" slot="content">Year - {{movie.year}}</div>
+    </ion-accordion>
+  </ion-accordion-group>
 </ion-content>
