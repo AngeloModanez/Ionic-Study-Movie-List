@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemReorderEventDetail } from '@ionic/angular';
 import { Movie } from 'src/app/models/movie';
 import { MovieService } from 'src/app/services/movie.service';
 
@@ -22,5 +23,10 @@ export class MoviesPage implements OnInit {
     this.service.getMovies().subscribe({
       next: movies => this.movies = movies
     });
+  }
+
+  handleReorder(ev: CustomEvent<ItemReorderEventDetail>) {
+    console.log('Dragged from index', ev.detail.from, 'to', ev.detail.to);
+    ev.detail.complete();
   }
 }

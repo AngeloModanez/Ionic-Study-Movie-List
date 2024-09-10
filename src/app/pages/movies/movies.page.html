@@ -1,18 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-card color="dark">
     <ion-card-header>
-      <ion-card-title>Movie List</ion-card-title>
+      <ion-card-title>
+        <ion-icon class="ion-margin-end" name="videocam"></ion-icon>
+        Movie List
+      </ion-card-title>
     </ion-card-header>
     <ion-list>
-      <ion-item button *ngFor="let movie of movies" [routerLink]="['/movies-details', movie.id]">
-        <ion-label>{{movie.title}}</ion-label>
-      </ion-item>
+      <ion-reorder-group [disabled]="false" (ionItemReorder)="handleReorder($any($event))">
+        <ion-item button *ngFor="let movie of movies" [routerLink]="['/movies-details', movie.id]">
+          <ion-label>{{movie.title}}</ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+      </ion-reorder-group>
     </ion-list>
   </ion-card>
 
